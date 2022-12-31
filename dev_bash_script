@@ -9,6 +9,8 @@
 sudo apt-get update
 
 sudo apt-get -y install tmux 
+curl -fLo ~/.tmux.conf https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/.tmux.conf
+
 sudo apt-get -y install cmake 
 sudo apt-get -y install git 
 sudo apt-get -y install g++ 
@@ -19,14 +21,13 @@ if ! command -v nvim > /dev/null; then
   sudo apt-get install vim
 fi
 # install neovim
-curl -O https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
-sudo apt-get -y install ./nvim-linux64.deb
-mkdir -p .config/nvim/
-# copy init.vim to .config/nvim/
+curl -fLo ~/nvim-linux64.deb https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
+sudo apt-get -y install ~/nvim-linux64.deb
+# config and install plugins
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-mkdir -p .config/nvim/lua/
-# copy plugins.lua
-#curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-#nvim -c "PlugInstall" -c "qa"
+# copy config files
+curl -fLo ~/.vimrc https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/.vimrc
+curl -fLo ~/.config/nvim/init.vim --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/init.vim
+curl -fLo ~/.config/nvim/lua/plugins.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/plugins.lua
+nvim -c "PackerInstall" -c "qa"
