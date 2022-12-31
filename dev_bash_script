@@ -30,4 +30,5 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 curl -fLo ~/.vimrc https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/.vimrc
 curl -fLo ~/.config/nvim/init.vim --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/init.vim
 curl -fLo ~/.config/nvim/lua/plugins.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/plugins.lua
+curl -fLo ~/.config/nvim/lua/nvim-tree-setup.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/nvim-tree-setup.lua
 nvim -c "PackerInstall" -c "qa"
