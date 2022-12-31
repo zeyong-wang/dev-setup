@@ -14,4 +14,5 @@ require('packer').startup(function(use)
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 end)
+require("nvim-tree-setup")
 -- echo 'require("nvim-tree-setup")' >> ~/.config/nvim/lua/plugins.lua in dev_bash_script
