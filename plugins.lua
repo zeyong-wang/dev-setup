@@ -7,3 +7,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 end)
+-- require("lsp") -- CiderLSP    
+-- require("diagnostics") -- Diagnostics    
+-- require("telescope_setup")    
+-- require("treesitter_setup")
