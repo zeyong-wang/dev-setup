@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Set the TZ environment variable
-#TZ=$(tzselect)
+TZ=$(tzselect)
 
 # Export the TZ variable to set the time zone for the current session
-#export TZ
+export TZ
 
 sudo apt-get update
 
