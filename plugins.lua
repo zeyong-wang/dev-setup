@@ -6,13 +6,16 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  -- file explorer
   use {
   'nvim-tree/nvim-tree.lua',
-  requires = {
+  requires = { 
     'nvim-tree/nvim-web-devicons', -- optional, for file icons
-  },
+  },  
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  -- lsp
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP, sudo apt-get install clang clangd
 end)
 require("nvim-tree-setup")
--- echo 'require("nvim-tree-setup")' >> ~/.config/nvim/lua/plugins.lua in dev_bash_script
+require("lsp-setup")
