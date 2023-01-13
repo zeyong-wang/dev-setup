@@ -13,7 +13,9 @@ curl -fLo ~/.tmux.conf https://raw.githubusercontent.com/zeyong-wang/dev-setup/m
 
 sudo apt-get -y install cmake 
 sudo apt-get -y install git 
-sudo apt-get -y install g++ 
+sudo apt-get -y install g++
+sudo apt-get -y install clang
+sudo apt-get -y install clangd
 
 # Check if Vim is installed
 if ! command -v nvim > /dev/null; then
