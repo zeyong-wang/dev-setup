@@ -14,8 +14,14 @@ require('packer').startup(function(use)
   },  
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  -- fuzzy finder
+  use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  requires = { {'nvim-lua/plenary.nvim'} }
+  }
   -- lsp
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP, sudo apt-get install clang clangd
 end)
 require("nvim-tree-setup")
+require("telescope-setup")
 require("lsp-setup")
