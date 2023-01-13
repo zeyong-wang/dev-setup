@@ -33,6 +33,6 @@ curl -fLo ~/.vimrc https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/
 curl -fLo ~/.config/nvim/init.vim --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/init.vim
 curl -fLo ~/.config/nvim/lua/plugins.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/plugins.lua
 curl -fLo ~/.config/nvim/lua/nvim-tree-setup.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/nvim-tree-setup.lua
-curl -fLo ~/.config/nvim/lua/nvim-tree-setup.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/lsp-setup.lua
-curl -fLo ~/.config/nvim/lua/nvim-tree-setup.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/telescope-setup.lua
+curl -fLo ~/.config/nvim/lua/lsp-setup.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/lsp-setup.lua
+curl -fLo ~/.config/nvim/lua/telescope-setup.lua --create-dirs https://raw.githubusercontent.com/zeyong-wang/dev-setup/main/telescope-setup.lua
 #nvim -c "PackerInstall" -c "qa"
